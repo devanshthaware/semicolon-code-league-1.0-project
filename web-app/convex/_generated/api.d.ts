@@ -8,7 +8,11 @@
  * @module
  */
 
+import type * as analysis from "../analysis.js";
+import type * as onboarding from "../onboarding.js";
+import type * as roadmap from "../roadmap.js";
 import type * as tasks from "../tasks.js";
+import type * as users from "../users.js";
 
 import type {
   ApiFromModules,
@@ -17,7 +21,11 @@ import type {
 } from "convex/server";
 
 declare const fullApi: ApiFromModules<{
+  analysis: typeof analysis;
+  onboarding: typeof onboarding;
+  roadmap: typeof roadmap;
   tasks: typeof tasks;
+  users: typeof users;
 }>;
 
 /**
